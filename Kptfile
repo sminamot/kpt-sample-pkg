@@ -4,3 +4,13 @@ metadata:
   name: kpt-sample-pkg
 packageMetadata:
   shortDescription: sample description
+openAPI:
+  definitions:
+    io.k8s.cli.setters.replicas:
+      description: replicas
+      type: integer
+      x-k8s-cli:
+        setter:
+          name: replicas
+          value: "2"
+          setBy: package-default
